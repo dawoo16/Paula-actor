@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Cormorant Garamond', serif;
+  background-color: black;
+}
+
+/* Obraz jako pełnoekranowe tło */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 39%;
+  z-index: 0;
+}
+
+/* Lewa kolumna przycisków */
+.button-wrapper {
+  position: absolute;
+  bottom: 20px;
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  z-index: 1;
+}
+
+.button-wrapper a {
+  font-size: 24px;
+  padding: 10px 30px;
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.button-wrapper a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Tekst w lewym górnym rogu */
+.top-left {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  z-index: 2;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.top-left h1 {
+  font-size: 74px;
+  margin: 0;
+  letter-spacing: 1px;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.top-left p {
+  font-size: 34px;
+  color: white;
+  margin-top: 2px;
+  font-family: 'Cormorant Garamond', serif;
+  margin-left: 240px;
+}
+
+/* Prawy dolny przycisk */
+.button-right {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  z-index: 2;
+}
+
+.button-right a {
+  font-size: 24px;
+  padding: 10px 30px;
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.button-right a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Uniwersalny styl przycisku */
+.button-style {
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 10px 30px;
+  background-color: transparent;
+  font-size: 26px;
+  width: 200px;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.button-style:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 📱 Media query – styl mobilny */
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+  }
+
+  .top-left h1 {
+    font-size: 36px;
+  }
+
+  .top-left p {
+    font-size: 18px;
+    margin-left: 120px;
+  }
+
+  .button-wrapper {
+    width: 120px;
+    left: 20px;
+    bottom: 80px;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .button-wrapper a {
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button-right {
+    bottom: 80px;
+    right: 20px;
+    width: 120px;
+  }
+
+  .button-right a {
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: black;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.back-link {
+  font-family: Georgia, serif;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  letter-spacing: 1px;
+  z-index: 3;
+}
+
+.contact-container {
+  max-width: 900px;
+  margin: 100px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-container h1 {
+  font-size: 28px;
+  margin-bottom: 60px;
+  letter-spacing: 2px;
+}
+
+.info-grid {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.left-column, .right-column {
+  width: 45%;
+  font-size: 18px;
+  line-height: 2.2;
+}
+.left-column {
+  margin-top: 70px;
+}
+
+.right-column {
+  margin-top: 70px;
+}
+
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .info-grid {
+    flex-direction: column;
+    gap: 0px;
+    align-items: center; /* wyśrodkowanie całego układu */
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+    max-width: 300px;     /* taka sama szerokość */
+    margin: 0 auto;
+    text-align: left;
+    font-size: 16px;
+    margin-top: 0;
+  }
+
+  .contact-container {
+    padding: 20px;
+    margin: 60px auto;
+    text-align: center;
+  }
+
+  .contact-container h1 {
+    font-size: 24px;
+    margin-bottom: 80px;
+  }
+
+  .back-link {
+    font-size: 13px;
+    top: 15px;
+    left: 20px;
+  }
+}
+
+
+
+

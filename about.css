@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  background-color: white;
+  color: #fff;
+  font-family: 'Cormorant SC', serif;
+}
+
+.back-link {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  letter-spacing: 1px;
+  z-index: 2;
+}
+
+.about-page {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  gap: 40px;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+
+.left-column img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+
+.right-column {
+  flex: 1;
+  font-size: 17px;
+  line-height: 1.8;
+  text-transform: none;
+  text-align: left;
+  color: black;
+}
+
+.right-column p {
+  margin-bottom: 20px;
+}
+
+
+.traits {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 40px;
+  margin: 20px 0;
+  font-size: 15px;
+}
+
+.langs {
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    justify-content: center;
+  }
+
+  .left-column {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .left-column img {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+}
+
