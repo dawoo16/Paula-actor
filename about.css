@@ -75,6 +75,18 @@ body {
   font-family: 'Cormorant SC', serif;
 }
 
+@media (max-width: 768px) {
+  .left-column {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .left-column img {
+    margin: 0 auto;
+  }
+}
+
 
 
 
