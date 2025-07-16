@@ -128,13 +128,23 @@ body, html {
     height: 100vh;
   }
 
+  .top-left {
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    text-align: center;
+  }
+
   .top-left h1 {
     font-size: 36px;
+    text-align: center;
   }
 
   .top-left p {
     font-size: 18px;
-    margin-left: 120px;
+    margin-left: 0;
+    text-align: center;
   }
 
   .button-wrapper {
