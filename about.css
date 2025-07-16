@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: white;
+  background-color: #000;
   color: #fff;
   font-family: 'Cormorant SC', serif;
 }
@@ -10,7 +10,7 @@ body {
   top: 20px;
   left: 30px;
   text-decoration: none;
-  color: black;
+  color: #ccc;
   font-size: 14px;
   letter-spacing: 1px;
   z-index: 2;
@@ -25,8 +25,8 @@ body {
 .content {
   display: flex;
   gap: 40px;
-  align-items: stretch;
-  flex-wrap: nowrap;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .left-column img {
@@ -36,20 +36,22 @@ body {
   object-fit: cover;
 }
 
-
 .right-column {
   flex: 1;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.8;
   text-transform: none;
   text-align: left;
-  color: black;
 }
 
 .right-column p {
   margin-bottom: 20px;
 }
 
+.highlight {
+  color: white;
+  font-style: italic;
+}
 
 .traits {
   display: grid;
@@ -61,11 +63,5 @@ body {
 
 .langs {
   margin-top: 10px;
-}
-
-@media (max-width: 768px) {
-  .content {
-    justify-content: center;
-  }
 }
 
