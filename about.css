@@ -67,17 +67,5 @@ body {
   .content {
     justify-content: center;
   }
-
-  .left-column {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .left-column img {
-    max-width: 250px;
-    margin: 0 auto;
-  }
-
 }
 
