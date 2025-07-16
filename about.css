@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   font-family: 'Cormorant SC', serif;
 }
 
@@ -10,16 +10,18 @@ body {
   top: 20px;
   left: 30px;
   text-decoration: none;
-  color: #ccc;
+  color: #000;
   font-size: 14px;
   letter-spacing: 1px;
   z-index: 2;
+  font-family: 'Cormorant SC', serif;
 }
 
 .about-page {
   max-width: 1100px;
   margin: 80px auto;
   padding: 20px;
+  font-family: 'Cormorant SC', serif;
 }
 
 .content {
@@ -27,6 +29,7 @@ body {
   gap: 40px;
   align-items: flex-start;
   flex-wrap: wrap;
+  font-family: 'Cormorant SC', serif;
 }
 
 .left-column img {
@@ -42,6 +45,8 @@ body {
   line-height: 1.8;
   text-transform: none;
   text-align: left;
+  color: #000;
+  font-family: 'Cormorant SC', serif;
 }
 
 .right-column p {
@@ -49,8 +54,9 @@ body {
 }
 
 .highlight {
-  color: white;
+  color: #000;
   font-style: italic;
+  font-family: 'Cormorant SC', serif;
 }
 
 .traits {
@@ -59,13 +65,15 @@ body {
   gap: 10px 40px;
   margin: 20px 0;
   font-size: 15px;
+  color: #000;
+  font-family: 'Cormorant SC', serif;
 }
 
 .langs {
   margin-top: 10px;
+  color: #000;
+  font-family: 'Cormorant SC', serif;
 }
-
-
 
 
 
