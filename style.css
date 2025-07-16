@@ -33,7 +33,7 @@ body, html {
 .button-wrapper {
   position: absolute;
   bottom: 20px;
-  width: 650px;
+  width: 550px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,7 +68,7 @@ body, html {
 }
 
 .top-left h1 {
-  font-size: 74px;
+  font-size: 60px;
   margin: 0;
   letter-spacing: 1px;
   font-family: 'Cormorant Garamond', serif;
@@ -79,7 +79,7 @@ body, html {
   color: white;
   margin-top: 2px;
   font-family: 'Cormorant Garamond', serif;
-  margin-left: 240px;
+  margin-left: 200px;
 }
 
 /* Prawy dolny przycisk */
