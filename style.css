@@ -129,7 +129,7 @@ body, html {
   }
 
   .top-left {
-    top: 40px;
+    top: 30px;
     left: 50%;
     transform: translateX(-50%);
     align-items: center;
@@ -138,13 +138,12 @@ body, html {
 
   .top-left h1 {
     font-size: 36px;
-    text-align: center;
+    white-space: nowrap; /* jedno wierszowo */
   }
 
   .top-left p {
     font-size: 18px;
     margin-left: 0;
-    text-align: center;
   }
 
   .button-wrapper {
