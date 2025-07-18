@@ -106,7 +106,7 @@ canvas#stars-bg {
   margin-bottom: 50px;
   text-align: center;
   color: black;
-  font-size: 24px;
+  font-size: 16px;
   font-family: 'Cormorant Garamond', serif;
   z-index: 2;
 }
