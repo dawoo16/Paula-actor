@@ -63,31 +63,21 @@ body {
 }
 
 @media (max-width: 768px) {
-  .info-grid {
-    flex-direction: column;
-    gap: 0px;
-    align-items: center; /* wyśrodkowanie całego układu */
+  .content {
+    flex-direction: column;   /* stack items vertically */
+    align-items: center;      /* center them horizontally */
+    gap: 20px;                /* spacing between photo and text */
   }
 
-  .left-column,
+  .left-column img {
+    width: 250px;
+    height: 429px;
+  }
+
   .right-column {
-    width: 100%;
-    max-width: 300px;     /* taka sama szerokość */
-    margin: 0 auto;
-    text-align: left;
+    max-width: 90%;
     font-size: 16px;
-    margin-top: 0;
-  }
-
-  .contact-container {
-    padding: 20px;
-    margin: 60px auto;
-    text-align: center;
-  }
-
-  .contact-container h1 {
-    font-size: 24px;
-    margin-bottom: 80px;
+    text-align: left;         /* keep text aligned left */
   }
 
   .back-link {
