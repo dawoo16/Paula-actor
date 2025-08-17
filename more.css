@@ -43,7 +43,7 @@ body {
   
   .gallery-img {
     width: 350px;
-    height: 500px;
+    height: 600px;
     object-fit: cover;
     cursor: pointer;
     transition: transform 0.3s;

@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  background-color: #fff;
-  color: #000;
+  background-color: white;
+  color: #fff;
   font-family: 'Cormorant SC', serif;
 }
 
@@ -10,54 +10,45 @@ body {
   top: 20px;
   left: 30px;
   text-decoration: none;
-  color: #000;
+  color: black;
   font-size: 14px;
   letter-spacing: 1px;
   z-index: 2;
-  font-family: 'Cormorant SC', serif;
 }
 
 .about-page {
   max-width: 1100px;
   margin: 80px auto;
   padding: 20px;
-  font-family: 'Cormorant SC', serif;
 }
 
 .content {
   display: flex;
   gap: 40px;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  font-family: 'Cormorant SC', serif;
+  align-items: stretch;
+  flex-wrap: nowrap;
 }
 
 .left-column img {
   width: 100%;
   max-width: 300px;
-  border-radius: 4px;
   object-fit: cover;
 }
 
+
 .right-column {
   flex: 1;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.8;
   text-transform: none;
   text-align: left;
-  color: #000;
-  font-family: 'Cormorant SC', serif;
+  color: black;
 }
 
 .right-column p {
   margin-bottom: 20px;
 }
 
-.highlight {
-  color: #000;
-  font-style: italic;
-  font-family: 'Cormorant SC', serif;
-}
 
 .traits {
   display: grid;
@@ -65,26 +56,10 @@ body {
   gap: 10px 40px;
   margin: 20px 0;
   font-size: 15px;
-  color: #000;
-  font-family: 'Cormorant SC', serif;
 }
 
 .langs {
   margin-top: 10px;
-  color: #000;
-  font-family: 'Cormorant SC', serif;
-}
-
-@media (max-width: 768px) {
-  .left-column {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .left-column img {
-    margin: 0 auto;
-  }
 }
 
 

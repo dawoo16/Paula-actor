@@ -42,8 +42,8 @@ canvas#stars-bg {
 }
 
 .gallery-img {
-  max-width: 275px;
-  max-height: 400px;
+  max-width: 350px;
+  max-height: 600px;
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -106,7 +106,7 @@ canvas#stars-bg {
   margin-bottom: 50px;
   text-align: center;
   color: black;
-  font-size: 16px;
+  font-size: 24px;
   font-family: 'Cormorant Garamond', serif;
   z-index: 2;
 }
