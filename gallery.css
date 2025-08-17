@@ -94,6 +94,12 @@ canvas#stars-bg {
   .gallery {
     gap: 30px; /* zmniejszony odstęp między kartami */
   }
+
+  .back-link {
+    font-size: 13px;
+    top: 15px;
+    left: 20px;
+  }
 }
 
 

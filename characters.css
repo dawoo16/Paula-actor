@@ -116,7 +116,13 @@ canvas#stars-bg {
 .arrow.right { right: 20px; }
 
 
+
 @media (max-width: 768px) {
+  .gallery-img {
+    width: 250px;
+    height: 429px;
+  }
+
   .photo-credit {
     font-size: 15px;
     font-family: 'Cormorant Garamond', serif;
