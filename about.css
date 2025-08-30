@@ -86,6 +86,21 @@ body {
     top: 15px;
     left: 20px;
   }
+
+  .traits {
+    gap: 4px 10px; /* jeszcze ciaśniej na mobile */
+    font-size: 14px; /* trochę mniejsza czcionka */
+  }
+
+  .traits div {
+    line-height: 1.4; /* mniejsze rozstrzelenie wierszy */
+  }
+
+  .traits strong {
+    display: inline-block;
+    min-width: 20px; /* stała szerokość etykiety, ułatwia czytanie */
+
+  }
 }
 
 
