@@ -19,7 +19,7 @@ body {
 .about-page {
   max-width: 1100px;
   margin: 80px auto;
-  padding: 20px;
+  padding: 40px;
 }
 
 .content {
@@ -33,6 +33,7 @@ body {
   width: 100%;
   max-width: 300px;
   object-fit: cover;
+  margin-top: 27px;
 }
 
 
