@@ -32,36 +32,16 @@ body {
     z-index: 3;
   }
   
-  .video-wrapper {
-    margin-top: 120px;
-    position: relative;
-    z-index: 2;
-  }
+.video-wrapper {
+  margin-top: 120px;
+  position: relative;
+  z-index: 2;
+
+  width: 600px;    
+  max-width: 90vw;   
+  aspect-ratio: 16 / 9; 
+}
   
-  .video-cover {
-    position: relative;
-    width: 600px;
-    max-width: 90vw;
-    cursor: pointer;
-  }
-  
-  .video-thumbnail {
-    width: 100%;
-    display: block;
-  }
-  
-  .play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 60px;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px 30px;
-    border-radius: 50%;
-    transition: transform 0.3s;
-  }
   
   .video-cover:hover .play-button {
     transform: translate(-50%, -50%) scale(1.1);
