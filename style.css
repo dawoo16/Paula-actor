@@ -110,18 +110,132 @@ img {
 
 
 /* ============================================================
-   HAMBURGER
+   MENU - PANEL PO PRAWEJ
 ============================================================ */
 
-.menu-toggle {
-    width: 38px;
-    height: 28px;
+.menu {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    width: min(420px, 82vw);
+    height: 100vh;
+
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /*
+       80% bieli, więc zdjęcie pod spodem
+       nadal delikatnie widać.
+    */
+
+    background: rgba(255, 255, 255, 0.80);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    transform: translateX(100%);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+}
+
+
+/* OTWARTE MENU */
+
+.menu.is-open {
+    transform: translateX(0);
+
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* ============================================================
+   LINKI
+============================================================ */
+
+.menu-navigation {
+    width: 100%;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 
-    padding: 3px 0;
+    align-items: flex-start;
+
+    gap: 18px;
+
+    padding-left: 60px;
+}
+
+
+.menu-navigation a {
+    color: #171717;
+
+    text-decoration: none;
+
+    font-size:
+        clamp(26px, 2.7vw, 38px);
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    position: relative;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.25s ease;
+}
+
+
+.menu-navigation a:hover {
+    opacity: 0.5;
+
+    transform: translateX(4px);
+}
+
+
+/* ============================================================
+   INSTAGRAM
+============================================================ */
+
+.instagram-link {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.instagram-link i {
+    font-size: 20px;
+}
+
+
+/* ============================================================
+   CLOSE
+============================================================ */
+
+.menu-close {
+    position: absolute;
+
+    top: 40px;
+    right: 38px;
+
+    width: 34px;
+    height: 34px;
 
     border: 0;
 
@@ -131,29 +245,66 @@ img {
 }
 
 
-.menu-toggle span {
-    display: block;
+.menu-close span {
+    position: absolute;
+
+    top: 50%;
+    left: 0;
 
     width: 100%;
     height: 1px;
 
-    background: var(--text);
-
-    transform-origin: center;
-}
-
-.instagram-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.instagram-link i {
-    font-size: 22px;
+    background: #171717;
 }
 
 
+.menu-close span:first-child {
+    transform: rotate(45deg);
+}
+
+
+.menu-close span:last-child {
+    transform: rotate(-45deg);
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 600px) {
+
+    .menu {
+        width: 78vw;
+    }
+
+
+    .menu-navigation {
+        padding-left: 35px;
+
+        gap: 14px;
+    }
+
+
+    .menu-navigation a {
+        font-size: 28px;
+    }
+
+
+    .instagram-link i {
+        font-size: 18px;
+    }
+
+
+    .menu-close {
+        top: 28px;
+        right: 24px;
+
+        width: 28px;
+        height: 28px;
+    }
+
+}
 /* ============================================================
    HERO
 ============================================================ */
@@ -657,142 +808,8 @@ img {
 }
 
 
-/* ============================================================
-   MENU OVERLAY
-============================================================ */
-
-.menu {
-    position: fixed;
-
-    inset: 0;
-
-    z-index: 100;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background:
-        rgba(255, 255, 255, 0.985);
-
-    opacity: 0;
-
-    visibility: hidden;
-
-    pointer-events: none;
-
-    transition:
-        opacity 420ms var(--ease),
-        visibility 420ms;
-}
 
 
-.menu.is-open {
-    opacity: 1;
-
-    visibility: visible;
-
-    pointer-events: auto;
-}
-
-
-.menu-navigation {
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-
-    gap: 18px;
-}
-
-
-.menu-navigation a {
-    position: relative;
-
-    color: #181818;
-
-    text-decoration: none;
-
-    font-size:
-        clamp(42px, 5vw, 74px);
-
-    font-weight: 400;
-
-    line-height: 1.08;
-}
-
-
-.menu-navigation a::after {
-    content: "";
-
-    position: absolute;
-
-    left: 50%;
-    bottom: -5px;
-
-    width: 0;
-    height: 1px;
-
-    background: #181818;
-
-    transform:
-        translateX(-50%);
-
-    transition:
-        width 350ms var(--ease);
-}
-
-
-.menu-navigation a:hover::after {
-    width: 100%;
-}
-
-
-/* ============================================================
-   CLOSE MENU
-============================================================ */
-
-.menu-close {
-    position: absolute;
-
-    top: 48px;
-    right:
-        clamp(32px, 6.4vw, 118px);
-
-    width: 36px;
-    height: 36px;
-
-    border: 0;
-
-    background: transparent;
-
-    cursor: pointer;
-}
-
-
-.menu-close span {
-    position: absolute;
-
-    top: 50%;
-    left: 0;
-
-    width: 100%;
-    height: 1px;
-
-    background: #181818;
-}
-
-
-.menu-close span:first-child {
-    transform:
-        rotate(45deg);
-}
-
-
-.menu-close span:last-child {
-    transform:
-        rotate(-45deg);
-}
 
 
 /* ============================================================
