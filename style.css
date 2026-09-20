@@ -536,48 +536,6 @@ img {
 }
 
 
-/* ============================================================
-   SHOWREEL
-============================================================ */
-
-.showreel {
-    width: 100%;
-
-    min-height: 100svh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding:
-        clamp(90px, 11vw, 175px)
-        clamp(24px, 7vw, 130px);
-
-    background: #fff;
-}
-
-
-.showreel-inner {
-    width:
-        min(
-            1280px,
-            100%
-        );
-}
-
-
-.showreel-video {
-    display: block;
-
-    width: 100%;
-
-    aspect-ratio: 16 / 9;
-
-    object-fit: cover;
-
-    background: #111;
-}
-
 
 /* ============================================================
    FOOTER
