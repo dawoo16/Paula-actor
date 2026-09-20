@@ -88,10 +88,7 @@ const menuClose =
    image1 ← image2 → image3
 ============================================================ */
 
-let currentIndex =
-    galleryImages.length > 1
-        ? 1
-        : 0;
+let currentIndex = 0;
 
 
 let animationLocked = false;
