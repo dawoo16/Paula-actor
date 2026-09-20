@@ -88,7 +88,7 @@ img {
 
 
 /* ============================================================
-   LOGO
+   PAULA WILLMAN
 ============================================================ */
 
 .brand {
@@ -97,7 +97,7 @@ img {
     text-decoration: none;
 
     font-size:
-        clamp(19px, 1.05vw, 23px);
+        clamp(19px, 1.25vw, 24px);
 
     font-weight: 500;
 
@@ -106,6 +106,54 @@ img {
     letter-spacing: 0.38em;
 
     white-space: nowrap;
+}
+
+
+/* ============================================================
+   HAMBURGER
+============================================================ */
+
+.menu-toggle {
+    width: 48px;
+    height: 34px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 3px 0;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    z-index: 30;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.menu-toggle span {
+    display: block;
+
+    width: 100%;
+    height: 1.5px;
+
+    background: #171717;
+
+    transform-origin: center;
+}
+
+
+.menu-toggle:hover {
+    opacity: 0.5;
+
+    transform: scale(1.03);
 }
 
 
@@ -119,8 +167,8 @@ img {
     top: 0;
     right: 0;
 
-    width: min(420px, 82vw);
-    height: 100vh;
+    width: min(430px, 80vw);
+    height: 100svh;
 
     z-index: 100;
 
@@ -129,23 +177,30 @@ img {
     justify-content: center;
 
     /*
-       80% bieli, więc zdjęcie pod spodem
-       nadal delikatnie widać.
+       80% białego tła.
+       Zdjęcie pod panelem nadal jest widoczne.
     */
 
-    background: rgba(255, 255, 255, 0.80);
+    background:
+        rgba(255, 255, 255, 0.80);
 
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter:
+        blur(8px);
 
-    transform: translateX(100%);
+    -webkit-backdrop-filter:
+        blur(8px);
+
+    transform:
+        translateX(100%);
 
     opacity: 0;
 
     visibility: hidden;
 
+    pointer-events: none;
+
     transition:
-        transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.5s var(--ease),
         opacity 0.35s ease,
         visibility 0.35s ease;
 }
@@ -154,16 +209,19 @@ img {
 /* OTWARTE MENU */
 
 .menu.is-open {
-    transform: translateX(0);
+    transform:
+        translateX(0);
 
     opacity: 1;
 
     visibility: visible;
+
+    pointer-events: auto;
 }
 
 
 /* ============================================================
-   LINKI
+   LINKI MENU
 ============================================================ */
 
 .menu-navigation {
@@ -174,36 +232,41 @@ img {
 
     align-items: flex-start;
 
-    gap: 18px;
+    gap: 16px;
 
-    padding-left: 60px;
+    padding-left:
+        clamp(38px, 4vw, 62px);
 }
 
 
 .menu-navigation a {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
     color: #171717;
 
     text-decoration: none;
 
     font-size:
-        clamp(26px, 2.7vw, 38px);
+        clamp(27px, 2.4vw, 36px);
 
     font-weight: 400;
 
     line-height: 1.1;
 
-    position: relative;
-
     transition:
-        opacity 0.2s ease,
-        transform 0.25s ease;
+        opacity 0.25s ease,
+        transform 0.35s var(--ease);
 }
 
 
 .menu-navigation a:hover {
-    opacity: 0.5;
+    opacity: 0.45;
 
-    transform: translateX(4px);
+    transform:
+        translateX(5px);
 }
 
 
@@ -213,35 +276,43 @@ img {
 
 .instagram-link {
     display: flex;
+
     align-items: center;
 
-    gap: 10px;
+    gap: 11px;
 }
 
 
 .instagram-link i {
     font-size: 20px;
+
+    line-height: 1;
 }
 
 
 /* ============================================================
-   CLOSE
+   CLOSE MENU
 ============================================================ */
 
 .menu-close {
     position: absolute;
 
-    top: 40px;
-    right: 38px;
+    top: 42px;
+    right: 42px;
 
-    width: 34px;
-    height: 34px;
+    width: 38px;
+    height: 38px;
 
     border: 0;
+    outline: 0;
 
     background: transparent;
 
     cursor: pointer;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
 }
 
 
@@ -252,59 +323,32 @@ img {
     left: 0;
 
     width: 100%;
-    height: 1px;
+    height: 1.5px;
 
     background: #171717;
 }
 
 
 .menu-close span:first-child {
-    transform: rotate(45deg);
+    transform:
+        rotate(45deg);
 }
 
 
 .menu-close span:last-child {
-    transform: rotate(-45deg);
+    transform:
+        rotate(-45deg);
 }
 
 
-/* ============================================================
-   MOBILE
-============================================================ */
+.menu-close:hover {
+    opacity: 0.45;
 
-@media (max-width: 600px) {
-
-    .menu {
-        width: 78vw;
-    }
-
-
-    .menu-navigation {
-        padding-left: 35px;
-
-        gap: 14px;
-    }
-
-
-    .menu-navigation a {
-        font-size: 28px;
-    }
-
-
-    .instagram-link i {
-        font-size: 18px;
-    }
-
-
-    .menu-close {
-        top: 28px;
-        right: 24px;
-
-        width: 28px;
-        height: 28px;
-    }
-
+    transform:
+        rotate(3deg);
 }
+
+
 /* ============================================================
    HERO
 ============================================================ */
@@ -334,7 +378,11 @@ img {
 ============================================================ */
 
 .gallery {
-    width: min(1540px, 100%);
+    width:
+        min(
+            1540px,
+            100%
+        );
 
     display: grid;
 
@@ -363,11 +411,6 @@ img {
 
     width: 100%;
 
-    /*
-       Na dużym ekranie zdjęcie nie będzie
-       absurdalnie wysokie.
-    */
-
     height:
         min(
             69vh,
@@ -390,7 +433,8 @@ img {
 
     object-fit: cover;
 
-    object-position: center center;
+    object-position:
+        center center;
 
     opacity: 1;
 
@@ -403,7 +447,7 @@ img {
 }
 
 
-/* zmiana slajdu */
+/* ZMIANA SLAJDU */
 
 .gallery-main.is-changing img {
     opacity: 0;
@@ -432,12 +476,7 @@ img {
 
     overflow: hidden;
 
-    /*
-       Nie dajemy szarej ramki,
-       żadnego card-look.
-    */
-
-    background: #fff;
+    background: #ffffff;
 
     transition:
         opacity 450ms ease,
@@ -452,11 +491,6 @@ img {
     object-fit: cover;
 
     object-position: center;
-
-    /*
-       Zdjęcie pozostaje widoczne,
-       ale nie konkuruje z centrum.
-    */
 
     opacity: 0.28;
 
@@ -473,9 +507,7 @@ img {
 
 
 /* ============================================================
-   "CHMURA" / MLECZNA WARSTWA
-
-   To jest główny efekt z referencji.
+   CHMURA / MLECZNA WARSTWA
 ============================================================ */
 
 .gallery-side::before {
@@ -506,10 +538,7 @@ img {
 }
 
 
-/*
-   Lewa fotografia bardziej rozpuszcza się
-   przy lewej krawędzi.
-*/
+/* LEWE ZDJĘCIE */
 
 .gallery-side-left::after {
     content: "";
@@ -525,16 +554,14 @@ img {
     background:
         linear-gradient(
             90deg,
-            rgba(255,255,255,0.72) 0%,
-            rgba(255,255,255,0.18) 42%,
-            rgba(255,255,255,0.03) 100%
+            rgba(255, 255, 255, 0.72) 0%,
+            rgba(255, 255, 255, 0.18) 42%,
+            rgba(255, 255, 255, 0.03) 100%
         );
 }
 
 
-/*
-   Analogicznie prawa.
-*/
+/* PRAWE ZDJĘCIE */
 
 .gallery-side-right::after {
     content: "";
@@ -550,19 +577,15 @@ img {
     background:
         linear-gradient(
             270deg,
-            rgba(255,255,255,0.72) 0%,
-            rgba(255,255,255,0.18) 42%,
-            rgba(255,255,255,0.03) 100%
+            rgba(255, 255, 255, 0.72) 0%,
+            rgba(255, 255, 255, 0.18) 42%,
+            rgba(255, 255, 255, 0.03) 100%
         );
 }
 
 
 /* ============================================================
-   STRZAŁKI
-
-   ZERO RAMKI.
-   ZERO TŁA.
-   Tylko cienka elegancka kreska.
+   STRZAŁKI KARUZELI
 ============================================================ */
 
 .gallery-arrow {
@@ -634,28 +657,6 @@ img {
 
 
 /* ============================================================
-   KONIEC GALERII
-
-   Nie ma zapętlenia.
-============================================================ */
-
-.gallery-arrow:disabled {
-    opacity: 0;
-
-    visibility: hidden;
-
-    pointer-events: none;
-}
-
-
-.gallery-side.is-empty {
-    opacity: 0;
-
-    visibility: hidden;
-}
-
-
-/* ============================================================
    SHOWREELS
 ============================================================ */
 
@@ -671,19 +672,28 @@ img {
 
 
 .showreel-inner {
-    width: min(1250px, 100%);
+    width:
+        min(
+            1250px,
+            100%
+        );
 
     margin: 0 auto;
 
     display: flex;
     flex-direction: column;
 
-    gap: clamp(70px, 10vw, 150px);
+    gap:
+        clamp(
+            70px,
+            10vw,
+            150px
+        );
 }
 
 
 /* ============================================================
-   YOUTUBE VIDEO
+   YOUTUBE
 ============================================================ */
 
 .youtube-wrapper {
@@ -691,7 +701,8 @@ img {
 
     width: 100%;
 
-    aspect-ratio: 16 / 9;
+    aspect-ratio:
+        16 / 9;
 
     overflow: hidden;
 
@@ -714,27 +725,6 @@ img {
 
 
 /* ============================================================
-   MOBILE
-============================================================ */
-
-@media (max-width: 700px) {
-
-    .showreel {
-        padding:
-            80px
-            16px;
-    }
-
-
-    .showreel-inner {
-        gap: 55px;
-    }
-
-}
-
-
-
-/* ============================================================
    SCROLL
 ============================================================ */
 
@@ -753,7 +743,7 @@ img {
 
     gap: 8px;
 
-    color: #777;
+    color: #777777;
 
     text-decoration: none;
 
@@ -773,9 +763,8 @@ img {
     width: 1px;
     height: 24px;
 
-    background: #777;
+    background: #777777;
 }
-
 
 
 /* ============================================================
@@ -789,9 +778,10 @@ img {
     align-items: center;
     justify-content: center;
 
-    padding: 40px 20px;
+    padding:
+        40px 20px;
 
-    background: #fff;
+    background: #ffffff;
 
     text-align: center;
 }
@@ -806,10 +796,6 @@ img {
 
     color: #242424;
 }
-
-
-
-
 
 
 /* ============================================================
@@ -844,6 +830,12 @@ img {
         min-height: 350px;
     }
 
+
+    .menu-toggle {
+        width: 44px;
+        height: 32px;
+    }
+
 }
 
 
@@ -859,20 +851,40 @@ img {
 
 
     .site-header {
-        padding-inline: 25px;
+        padding-inline:
+            25px;
     }
 
 
     .brand {
-        font-size: 13px;
+        font-size: 16px;
 
         letter-spacing: 0.32em;
     }
 
 
     .menu-toggle {
-        width: 31px;
-        height: 24px;
+        width: 41px;
+        height: 29px;
+    }
+
+
+    .menu {
+        width:
+            min(
+                390px,
+                78vw
+            );
+    }
+
+
+    .menu-navigation {
+        padding-left: 42px;
+    }
+
+
+    .menu-navigation a {
+        font-size: 30px;
     }
 
 
@@ -880,12 +892,6 @@ img {
         padding-inline: 0;
     }
 
-
-    /*
-       Karuzela jest szersza od viewportu.
-       Dzięki temu boczne fotografie są
-       naturalnie przycięte przez ekran.
-    */
 
     .gallery {
         width: 920px;
@@ -902,14 +908,22 @@ img {
 
 
     .gallery-main {
-        height: min(62vh, 590px);
+        height:
+            min(
+                62vh,
+                590px
+            );
 
         min-height: 440px;
     }
 
 
     .gallery-side {
-        height: min(49vh, 465px);
+        height:
+            min(
+                49vh,
+                465px
+            );
 
         min-height: 340px;
     }
@@ -937,14 +951,64 @@ img {
     .site-header {
         height: 85px;
 
-        padding-inline: 20px;
+        padding-inline:
+            20px;
     }
 
 
     .brand {
-        font-size: 12px;
+        font-size: 15px;
 
         letter-spacing: 0.28em;
+    }
+
+
+    /*
+       Nadal wyraźny hamburger,
+       nie mikroskopijny.
+    */
+
+    .menu-toggle {
+        width: 38px;
+        height: 27px;
+
+        padding: 2px 0;
+    }
+
+
+    .menu-toggle span {
+        height: 1.4px;
+    }
+
+
+    .menu {
+        width: 78vw;
+    }
+
+
+    .menu-navigation {
+        padding-left: 32px;
+
+        gap: 13px;
+    }
+
+
+    .menu-navigation a {
+        font-size: 27px;
+    }
+
+
+    .instagram-link i {
+        font-size: 18px;
+    }
+
+
+    .menu-close {
+        top: 28px;
+        right: 24px;
+
+        width: 31px;
+        height: 31px;
     }
 
 
@@ -972,14 +1036,22 @@ img {
 
 
     .gallery-main {
-        height: min(63svh, 550px);
+        height:
+            min(
+                63svh,
+                550px
+            );
 
         min-height: 430px;
     }
 
 
     .gallery-side {
-        height: min(45svh, 400px);
+        height:
+            min(
+                45svh,
+                400px
+            );
 
         min-height: 310px;
     }
@@ -1017,6 +1089,11 @@ img {
     }
 
 
+    .showreel-inner {
+        gap: 55px;
+    }
+
+
     .footer {
         min-height: 115px;
     }
@@ -1024,12 +1101,6 @@ img {
 
     .footer p {
         font-size: 15px;
-    }
-
-
-    .menu-close {
-        top: 26px;
-        right: 20px;
     }
 
 }
@@ -1049,11 +1120,14 @@ img {
     *,
     *::before,
     *::after {
-        animation-duration: 0.01ms !important;
+        animation-duration:
+            0.01ms !important;
 
-        animation-iteration-count: 1 !important;
+        animation-iteration-count:
+            1 !important;
 
-        transition-duration: 0.01ms !important;
+        transition-duration:
+            0.01ms !important;
     }
 
 }
