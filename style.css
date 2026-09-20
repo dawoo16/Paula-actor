@@ -31,6 +31,7 @@ body {
     min-width: 320px;
 
     background: var(--background);
+
     color: var(--text);
 
     font-family:
@@ -62,6 +63,7 @@ img {
 }
 
 
+
 /* ============================================================
    HEADER
 ============================================================ */
@@ -86,6 +88,7 @@ img {
 }
 
 
+
 /* ============================================================
    PAULA WILLMAN
 ============================================================ */
@@ -106,6 +109,7 @@ img {
 
     white-space: nowrap;
 }
+
 
 
 /* ============================================================
@@ -138,26 +142,26 @@ img {
 
 
 .menu-toggle span {
-    display: block;
-
     width: 100%;
     height: 1.5px;
 
-    background: #171717;
+    display: block;
 
-    transform-origin: center;
+    background: #171717;
 }
 
 
 .menu-toggle:hover {
-    opacity: 0.5;
+    opacity: 0.45;
 
-    transform: scale(1.03);
+    transform:
+        scale(1.03);
 }
 
 
+
 /* ============================================================
-   MENU - PANEL PO PRAWEJ
+   MENU
 ============================================================ */
 
 .menu {
@@ -166,7 +170,12 @@ img {
     top: 0;
     right: 0;
 
-    width: min(430px, 80vw);
+    width:
+        min(
+            430px,
+            80vw
+        );
+
     height: 100svh;
 
     z-index: 100;
@@ -175,13 +184,22 @@ img {
     align-items: center;
     justify-content: center;
 
+
     /*
        80% białego tła.
-       Zdjęcie jest nadal widoczne pod menu.
+
+       Zdjęcie galerii pozostaje
+       widoczne pod panelem.
     */
 
     background:
-        rgba(255, 255, 255, 0.80);
+        rgba(
+            255,
+            255,
+            255,
+            0.80
+        );
+
 
     backdrop-filter:
         blur(8px);
@@ -189,14 +207,17 @@ img {
     -webkit-backdrop-filter:
         blur(8px);
 
+
     transform:
         translateX(100%);
+
 
     opacity: 0;
 
     visibility: hidden;
 
     pointer-events: none;
+
 
     transition:
         transform 0.5s var(--ease),
@@ -205,7 +226,8 @@ img {
 }
 
 
-/* OTWARTE MENU */
+
+/* MENU OTWARTE */
 
 .menu.is-open {
     transform:
@@ -217,6 +239,7 @@ img {
 
     pointer-events: auto;
 }
+
 
 
 /* ============================================================
@@ -234,7 +257,11 @@ img {
     gap: 17px;
 
     padding-left:
-        clamp(38px, 4vw, 62px);
+        clamp(
+            38px,
+            4vw,
+            62px
+        );
 }
 
 
@@ -249,7 +276,11 @@ img {
     text-decoration: none;
 
     font-size:
-        clamp(27px, 2.4vw, 36px);
+        clamp(
+            27px,
+            2.4vw,
+            36px
+        );
 
     font-weight: 400;
 
@@ -269,61 +300,62 @@ img {
 }
 
 
+
 /* ============================================================
    INSTAGRAM
 ============================================================ */
 
 .instagram-link {
     display: flex;
+
     align-items: center;
 
-    gap: 10px;
+    gap: 12px;
 }
 
 
-/*
-   Stała szerokość ikonki jest ważna.
-   Dzięki temu Contact możemy wyrównać
-   dokładnie do litery I w Instagram.
-*/
+.instagram-icon {
+    width: 22px;
+    height: 22px;
 
-.instagram-link i {
-    width: 20px;
+    flex:
+        0 0 22px;
 
-    flex: 0 0 20px;
+    fill: none;
 
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    stroke: #171717;
 
-    font-size: 20px;
+    stroke-width: 1.7;
 
-    line-height: 1;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 
-/*
-   Font Awesome generuje samą ikonę przez ::before.
-   Nie dokładamy tutaj żadnej kolejnej ikonki.
-*/
+.instagram-dot {
+    fill: #171717;
 
-.instagram-link i::after {
-    content: none;
+    stroke: none;
 }
+
 
 
 /* ============================================================
-   WYRÓWNANIE CONTACT
+   CONTACT
 
-   20px ikonki + 10px gap = 30px
+   22px ikonki
+   +
+   12px odstępu
 
-   C w Contact jest dokładnie pod
-   I w Instagram.
+   = 34px
+
+   Contact zaczyna się pod napisem Instagram.
 ============================================================ */
 
-.menu-navigation > a:not(.instagram-link) {
-    padding-left: 30px;
+.contact-link {
+    padding-left: 34px;
 }
+
 
 
 /* ============================================================
@@ -347,8 +379,7 @@ img {
     cursor: pointer;
 
     transition:
-        opacity 0.25s ease,
-        transform 0.25s ease;
+        opacity 0.25s ease;
 }
 
 
@@ -382,6 +413,7 @@ img {
 }
 
 
+
 /* ============================================================
    HERO
 ============================================================ */
@@ -404,6 +436,7 @@ img {
 
     overflow: hidden;
 }
+
 
 
 /* ============================================================
@@ -429,10 +462,15 @@ img {
     align-items: center;
 
     column-gap:
-        clamp(8px, 1.6vw, 28px);
+        clamp(
+            8px,
+            1.6vw,
+            28px
+        );
 
     margin: auto;
 }
+
 
 
 /* ============================================================
@@ -454,7 +492,8 @@ img {
 
     overflow: hidden;
 
-    background: #f4f3f1;
+    background:
+        #f4f3f1;
 
     z-index: 3;
 }
@@ -480,7 +519,8 @@ img {
 }
 
 
-/* zmiana zdjęcia */
+
+/* ZMIANA SLAJDU */
 
 .gallery-main.is-changing img {
     opacity: 0;
@@ -488,6 +528,7 @@ img {
     transform:
         scale(0.988);
 }
+
 
 
 /* ============================================================
@@ -509,7 +550,8 @@ img {
 
     overflow: hidden;
 
-    background: #ffffff;
+    background:
+        #ffffff;
 
     transition:
         opacity 450ms ease,
@@ -539,6 +581,7 @@ img {
 }
 
 
+
 /* ============================================================
    CHMURA / MLECZNA WARSTWA
 ============================================================ */
@@ -554,21 +597,57 @@ img {
 
     pointer-events: none;
 
+
     background:
 
         linear-gradient(
-            rgba(255, 255, 255, 0.33),
-            rgba(255, 255, 255, 0.33)
+            rgba(
+                255,
+                255,
+                255,
+                0.33
+            ),
+            rgba(
+                255,
+                255,
+                255,
+                0.33
+            )
         ),
 
         radial-gradient(
             ellipse at center,
-            rgba(255, 255, 255, 0.03) 0%,
-            rgba(255, 255, 255, 0.08) 35%,
-            rgba(255, 255, 255, 0.36) 72%,
-            rgba(255, 255, 255, 0.78) 100%
+
+            rgba(
+                255,
+                255,
+                255,
+                0.03
+            ) 0%,
+
+            rgba(
+                255,
+                255,
+                255,
+                0.08
+            ) 35%,
+
+            rgba(
+                255,
+                255,
+                255,
+                0.36
+            ) 72%,
+
+            rgba(
+                255,
+                255,
+                255,
+                0.78
+            ) 100%
         );
 }
+
 
 
 /* LEWE ZDJĘCIE */
@@ -584,14 +663,35 @@ img {
 
     pointer-events: none;
 
+
     background:
+
         linear-gradient(
             90deg,
-            rgba(255, 255, 255, 0.72) 0%,
-            rgba(255, 255, 255, 0.18) 42%,
-            rgba(255, 255, 255, 0.03) 100%
+
+            rgba(
+                255,
+                255,
+                255,
+                0.72
+            ) 0%,
+
+            rgba(
+                255,
+                255,
+                255,
+                0.18
+            ) 42%,
+
+            rgba(
+                255,
+                255,
+                255,
+                0.03
+            ) 100%
         );
 }
+
 
 
 /* PRAWE ZDJĘCIE */
@@ -607,18 +707,39 @@ img {
 
     pointer-events: none;
 
+
     background:
+
         linear-gradient(
             270deg,
-            rgba(255, 255, 255, 0.72) 0%,
-            rgba(255, 255, 255, 0.18) 42%,
-            rgba(255, 255, 255, 0.03) 100%
+
+            rgba(
+                255,
+                255,
+                255,
+                0.72
+            ) 0%,
+
+            rgba(
+                255,
+                255,
+                255,
+                0.18
+            ) 42%,
+
+            rgba(
+                255,
+                255,
+                255,
+                0.03
+            ) 100%
         );
 }
 
 
+
 /* ============================================================
-   STRZAŁKI KARUZELI
+   STRZAŁKI
 ============================================================ */
 
 .gallery-arrow {
@@ -689,73 +810,6 @@ img {
 }
 
 
-/* ============================================================
-   SHOWREELS
-============================================================ */
-
-.showreel {
-    width: 100%;
-
-    padding:
-        clamp(110px, 13vw, 190px)
-        clamp(20px, 7vw, 120px);
-
-    background: #ffffff;
-}
-
-
-.showreel-inner {
-    width:
-        min(
-            1250px,
-            100%
-        );
-
-    margin: 0 auto;
-
-    display: flex;
-    flex-direction: column;
-
-    gap:
-        clamp(
-            70px,
-            10vw,
-            150px
-        );
-}
-
-
-/* ============================================================
-   YOUTUBE
-============================================================ */
-
-.youtube-wrapper {
-    position: relative;
-
-    width: 100%;
-
-    aspect-ratio:
-        16 / 9;
-
-    overflow: hidden;
-
-    background: #000000;
-}
-
-
-.youtube-wrapper iframe {
-    position: absolute;
-
-    inset: 0;
-
-    width: 100%;
-    height: 100%;
-
-    border: 0;
-
-    display: block;
-}
-
 
 /* ============================================================
    SCROLL
@@ -782,9 +836,11 @@ img {
 
     font-size: 12px;
 
-    letter-spacing: 0.2em;
+    letter-spacing:
+        0.2em;
 
-    text-transform: uppercase;
+    text-transform:
+        uppercase;
 
     opacity: 0.62;
 }
@@ -796,8 +852,91 @@ img {
     width: 1px;
     height: 24px;
 
-    background: #777777;
+    background:
+        #777777;
 }
+
+
+
+/* ============================================================
+   SHOWREELS
+============================================================ */
+
+.showreel {
+    width: 100%;
+
+    padding:
+        clamp(
+            110px,
+            13vw,
+            190px
+        )
+        clamp(
+            20px,
+            7vw,
+            120px
+        );
+
+    background:
+        #ffffff;
+}
+
+
+.showreel-inner {
+    width:
+        min(
+            1250px,
+            100%
+        );
+
+    margin:
+        0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap:
+        clamp(
+            70px,
+            10vw,
+            150px
+        );
+}
+
+
+
+/* ============================================================
+   YOUTUBE
+============================================================ */
+
+.youtube-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio:
+        16 / 9;
+
+    overflow: hidden;
+
+    background:
+        #000000;
+}
+
+
+.youtube-wrapper iframe {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+
+    display: block;
+}
+
 
 
 /* ============================================================
@@ -814,7 +953,8 @@ img {
     padding:
         40px 20px;
 
-    background: #ffffff;
+    background:
+        #ffffff;
 
     text-align: center;
 }
@@ -825,10 +965,13 @@ img {
 
     font-weight: 400;
 
-    letter-spacing: 0.01em;
+    letter-spacing:
+        0.01em;
 
-    color: #242424;
+    color:
+        #242424;
 }
+
 
 
 /* ============================================================
@@ -872,6 +1015,7 @@ img {
 }
 
 
+
 /* ============================================================
    TABLET
 ============================================================ */
@@ -884,14 +1028,16 @@ img {
 
 
     .site-header {
-        padding-inline: 25px;
+        padding-inline:
+            25px;
     }
 
 
     .brand {
         font-size: 16px;
 
-        letter-spacing: 0.32em;
+        letter-spacing:
+            0.32em;
     }
 
 
@@ -904,45 +1050,50 @@ img {
     .menu {
         width:
             min(
-                390px,
-                78vw
+                350px,
+                72vw
             );
     }
 
 
     .menu-navigation {
-        padding-left: 42px;
+        padding-left:
+            38px;
 
-        gap: 15px;
+        gap:
+            15px;
     }
 
 
     .menu-navigation a {
-        font-size: 30px;
+        font-size:
+            30px;
     }
 
 
-    .instagram-link i {
-        width: 19px;
+    .instagram-icon {
+        width: 21px;
+        height: 21px;
 
-        flex-basis: 19px;
-
-        font-size: 19px;
+        flex-basis: 21px;
     }
 
 
-    .menu-navigation > a:not(.instagram-link) {
-        padding-left: 29px;
+    .contact-link {
+        padding-left:
+            33px;
     }
 
 
     .hero {
-        padding-inline: 0;
+        padding-inline:
+            0;
     }
 
 
     .gallery {
-        width: 920px;
+        width:
+            920px;
 
         grid-template-columns:
             205px
@@ -951,7 +1102,8 @@ img {
             48px
             205px;
 
-        column-gap: 10px;
+        column-gap:
+            10px;
     }
 
 
@@ -962,7 +1114,8 @@ img {
                 590px
             );
 
-        min-height: 440px;
+        min-height:
+            440px;
     }
 
 
@@ -973,21 +1126,27 @@ img {
                 465px
             );
 
-        min-height: 340px;
+        min-height:
+            340px;
     }
 
 
     .gallery-arrow svg {
-        width: 21px;
-        height: 44px;
+        width:
+            21px;
+
+        height:
+            44px;
     }
 
 
     .scroll-indicator {
-        display: none;
+        display:
+            none;
     }
 
 }
+
 
 
 /* ============================================================
@@ -997,123 +1156,164 @@ img {
 @media (max-width: 520px) {
 
     .site-header {
-        height: 85px;
+        height:
+            85px;
 
-        padding-inline: 20px;
+        padding-inline:
+            20px;
     }
 
 
     .brand {
-        font-size: 15px;
+        font-size:
+            15px;
 
-        letter-spacing: 0.28em;
+        letter-spacing:
+            0.28em;
     }
 
 
-    /* hamburger nadal jest dobrze widoczny */
+    /* HAMBURGER */
 
     .menu-toggle {
-        width: 38px;
-        height: 27px;
+        width:
+            40px;
 
-        padding: 2px 0;
+        height:
+            28px;
+
+        padding:
+            2px 0;
     }
 
 
     .menu-toggle span {
-        height: 1.4px;
+        height:
+            1.4px;
     }
 
 
-    /* PANEL */
+    /* MENU */
 
     .menu {
-        width: 80vw;
-
         /*
-           Na telefonie trochę mniej blur,
-           żeby panel nie był ciężki.
+           Panel tylko po prawej stronie.
         */
 
+        width:
+            min(
+                290px,
+                72vw
+            );
+
+
         backdrop-filter:
-            blur(6px);
+            blur(7px);
 
         -webkit-backdrop-filter:
-            blur(6px);
+            blur(7px);
     }
 
 
     .menu-navigation {
-        padding-left: 32px;
+        padding-left:
+            30px;
 
-        gap: 14px;
+        gap:
+            14px;
     }
 
 
     .menu-navigation a {
-        font-size: 27px;
+        font-size:
+            27px;
 
-        line-height: 1.1;
+        line-height:
+            1.1;
     }
 
 
     /*
-       Jedna ikonka.
-       Stały rozmiar zapobiega nachodzeniu.
+       Jedna ikonka Instagram.
+       Nie ma Font Awesome ani emoji,
+       więc nie pojawi się znak ?.
     */
 
     .instagram-link {
-        gap: 9px;
+        gap:
+            12px;
     }
 
 
-    .instagram-link i {
-        width: 18px;
-        height: 18px;
+    .instagram-icon {
+        width:
+            22px;
+
+        height:
+            22px;
 
         flex:
-            0 0 18px;
-
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-
-        font-size: 18px;
-
-        line-height: 18px;
-
-        overflow: hidden;
+            0 0 22px;
     }
 
 
     /*
-       18px ikonki + 9px gap = 27px
+       22px ikonki + 12px odstępu = 34px.
+
+       Dajemy 36px, żeby Contact był
+       minimalnie bardziej w prawo,
+       zgodnie ze screenem.
     */
 
-    .menu-navigation > a:not(.instagram-link) {
-        padding-left: 27px;
+    .contact-link {
+        padding-left:
+            36px;
     }
 
+
+    /* X */
 
     .menu-close {
-        top: 28px;
-        right: 24px;
+        top:
+            27px;
 
-        width: 31px;
-        height: 31px;
+        right:
+            23px;
+
+        width:
+            34px;
+
+        height:
+            34px;
     }
 
+
+    /* HERO */
 
     .hero {
-        min-height: 100svh;
+        min-height:
+            100svh;
 
-        padding-top: 95px;
-        padding-bottom: 40px;
+        padding-top:
+            95px;
+
+        padding-bottom:
+            40px;
     }
 
 
+    /*
+       Karuzela jest celowo szersza
+       od ekranu.
+
+       Dzięki temu centralne zdjęcie
+       pozostaje duże, a boczne
+       fotografie są częściowo widoczne.
+    */
+
     .gallery {
-        width: 720px;
+        width:
+            720px;
 
         grid-template-columns:
             145px
@@ -1122,7 +1322,8 @@ img {
             36px
             145px;
 
-        column-gap: 6px;
+        column-gap:
+            6px;
     }
 
 
@@ -1133,7 +1334,8 @@ img {
                 550px
             );
 
-        min-height: 430px;
+        min-height:
+            430px;
     }
 
 
@@ -1144,12 +1346,14 @@ img {
                 400px
             );
 
-        min-height: 310px;
+        min-height:
+            310px;
     }
 
 
     .gallery-side img {
-        opacity: 0.21;
+        opacity:
+            0.21;
 
         filter:
             grayscale(12%)
@@ -1161,18 +1365,25 @@ img {
 
 
     .gallery-arrow {
-        height: 95px;
+        height:
+            95px;
     }
 
 
     .gallery-arrow svg {
-        width: 17px;
-        height: 37px;
+        width:
+            17px;
+
+        height:
+            37px;
     }
 
 
+    /* SHOWREELS */
+
     .showreel {
-        min-height: auto;
+        min-height:
+            auto;
 
         padding:
             90px
@@ -1181,20 +1392,26 @@ img {
 
 
     .showreel-inner {
-        gap: 55px;
+        gap:
+            55px;
     }
 
 
+    /* FOOTER */
+
     .footer {
-        min-height: 115px;
+        min-height:
+            115px;
     }
 
 
     .footer p {
-        font-size: 15px;
+        font-size:
+            15px;
     }
 
 }
+
 
 
 /* ============================================================
@@ -1204,59 +1421,73 @@ img {
 @media (max-width: 380px) {
 
     .brand {
-        font-size: 13px;
+        font-size:
+            13px;
 
-        letter-spacing: 0.24em;
+        letter-spacing:
+            0.24em;
     }
 
 
     .menu-toggle {
-        width: 35px;
-        height: 25px;
+        width:
+            36px;
+
+        height:
+            26px;
     }
 
 
     .menu {
-        width: 84vw;
+        width:
+            74vw;
     }
 
 
     .menu-navigation {
-        padding-left: 28px;
+        padding-left:
+            26px;
     }
 
 
     .menu-navigation a {
-        font-size: 25px;
+        font-size:
+            25px;
     }
 
 
     .instagram-link {
-        gap: 8px;
+        gap:
+            10px;
     }
 
 
-    .instagram-link i {
-        width: 17px;
-        height: 17px;
+    .instagram-icon {
+        width:
+            20px;
 
-        flex-basis: 17px;
+        height:
+            20px;
 
-        font-size: 17px;
-
-        line-height: 17px;
+        flex-basis:
+            20px;
     }
 
 
     /*
-       17 + 8 = 25
+       20 + 10 = 30.
+
+       Lekko przesuwamy Contact
+       jeszcze o 2px.
     */
 
-    .menu-navigation > a:not(.instagram-link) {
-        padding-left: 25px;
+    .contact-link {
+        padding-left:
+            32px;
     }
 
 }
+
 
 
 /* ============================================================
@@ -1266,7 +1497,8 @@ img {
 @media (prefers-reduced-motion: reduce) {
 
     html {
-        scroll-behavior: auto;
+        scroll-behavior:
+            auto;
     }
 
 
