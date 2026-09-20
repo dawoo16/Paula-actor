@@ -97,7 +97,7 @@ img {
     text-decoration: none;
 
     font-size:
-        clamp(15px, 1.05vw, 18px);
+        clamp(19px, 1.05vw, 23px);
 
     font-weight: 500;
 
