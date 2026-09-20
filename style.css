@@ -142,6 +142,17 @@ img {
     transform-origin: center;
 }
 
+.instagram-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.instagram-link i {
+    font-size: 22px;
+}
+
 
 /* ============================================================
    HERO
