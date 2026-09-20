@@ -1,30 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="style.css" />
-  <title>PAULA WILLMAN</title>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Paula Willman — Actor"
+    >
+
+    <title>PAULA WILLMAN</title>
+
+    <!-- Cormorant Garamond -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Główne zdjęcie startowe -->
+    <link
+        rel="preload"
+        href="image00002.jpeg"
+        as="image"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 </head>
+
+
 <body>
-  <div class="hero">
-    <img src="main.jpeg" alt="Background" class="bg-img" />
 
-    <div class="top-left">
-        <h1>PAULA WILLMAN</h1>
-        <p>actor</p>
-      </div>
+    <!-- ============================================
+         HEADER
+    ============================================= -->
 
-      <div class="button-right">
-        <a href="contact.html"class="button-style">CONTACT</a>
-      </div>
-      
+    <header class="site-header">
 
-    <div class="button-wrapper">
-      <a href="gallery.html"class="button-style">GALLERY</a>
-      <a href="reels.html"class="button-style">SHOWREELS</a>
-      <a href="about.html"class="button-style">RESUME</a>
+        <a
+            href="#home"
+            class="brand"
+            aria-label="Paula Willman homepage"
+        >
+            PAULA WILLMAN
+        </a>
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Open menu"
+            aria-controls="menu"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </header>
+
+
+    <!-- ============================================
+         MENU
+    ============================================= -->
+
+    <div
+        class="menu"
+        id="menu"
+        aria-hidden="true"
+    >
+
+        <button
+            class="menu-close"
+            id="menuClose"
+            type="button"
+            aria-label="Close menu"
+        >
+            <span></span>
+            <span></span>
+        </button>
+
+
+        <nav class="menu-navigation">
+
+            <a
+                href="https://www.instagram.com/villmanova/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Instagram
+            </a>
+
+
+            <a
+                href="mailto:paula.willman@gmail.com"
+            >
+                Contact
+            </a>
+
+        </nav>
+
     </div>
-  </div>
+
+
+    <main>
+
+        <!-- ========================================
+             GŁÓWNA GALERIA
+        ========================================= -->
+
+        <section
+            class="hero"
+            id="home"
+        >
+
+            <div
+                class="gallery"
+                id="gallery"
+            >
+
+
+                <!-- LEWE ZDJĘCIE -->
+
+                <div
+                    class="gallery-side gallery-side-left"
+                    id="leftSlide"
+                    aria-hidden="true"
+                >
+
+                    <img
+                        id="leftImage"
+                        alt=""
+                        draggable="false"
+                        decoding="async"
+                    >
+
+                </div>
+
+
+                <!-- STRZAŁKA W LEWO -->
+
+                <button
+                    class="gallery-arrow gallery-arrow-left"
+                    id="previousButton"
+                    type="button"
+                    aria-label="Previous photograph"
+                >
+
+                    <svg
+                        viewBox="0 0 32 64"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M25 5L7 32L25 59"
+                        />
+                    </svg>
+
+                </button>
+
+
+                <!-- GŁÓWNE ZDJĘCIE -->
+
+                <figure
+                    class="gallery-main"
+                    id="mainSlide"
+                >
+
+                    <img
+                        id="centerImage"
+                        alt="Paula Willman"
+                        draggable="false"
+                        decoding="async"
+                    >
+
+                </figure>
+
+
+                <!-- STRZAŁKA W PRAWO -->
+
+                <button
+                    class="gallery-arrow gallery-arrow-right"
+                    id="nextButton"
+                    type="button"
+                    aria-label="Next photograph"
+                >
+
+                    <svg
+                        viewBox="0 0 32 64"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M7 5L25 32L7 59"
+                        />
+                    </svg>
+
+                </button>
+
+
+                <!-- PRAWE ZDJĘCIE -->
+
+                <div
+                    class="gallery-side gallery-side-right"
+                    id="rightSlide"
+                    aria-hidden="true"
+                >
+
+                    <img
+                        id="rightImage"
+                        alt=""
+                        draggable="false"
+                        decoding="async"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- SCROLL -->
+
+            <a
+                href="#showreel"
+                class="scroll-indicator"
+                aria-label="Scroll to showreel"
+            >
+                <span>scroll</span>
+
+                <span class="scroll-line"></span>
+            </a>
+
+        </section>
+
+
+        <!-- ========================================
+             SHOWREEL
+        ========================================= -->
+
+        <section
+            class="showreel"
+            id="showreel"
+        >
+
+            <div class="showreel-inner">
+
+                <video
+                    class="showreel-video"
+                    controls
+                    playsinline
+                    preload="metadata"
+                >
+
+                    <source
+                        src="showreel.mp4"
+                        type="video/mp4"
+                    >
+
+                    Your browser does not support video.
+
+                </video>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ============================================
+         FOOTER
+    ============================================= -->
+
+    <footer class="footer">
+
+        <p>
+            ©
+            <span id="year"></span>
+            All rights reserved
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
